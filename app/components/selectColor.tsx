@@ -9,7 +9,9 @@ export default function SelectColor() {
 
   function onChange(event: ColorResult) {
     setSelectedColor(event.hex);
-    navigate(`/${encodeURIComponent(event.hex)}`);
+    navigate(`/${encodeURIComponent(event.hex)}`, {
+      replace: true,
+    });
   }
 
   useEffect(() => {
