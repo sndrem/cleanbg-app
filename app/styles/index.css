@@ -1,41 +1,46 @@
 html {
-    background: rgb(255,20,20);
-    background: linear-gradient(180deg, rgba(255,20,20,1) 0%, rgba(253,222,24,1) 100%);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: rgb(255, 20, 20);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 20, 20, 1) 0%,
+    rgba(253, 222, 24, 1) 100%
+  );
+  height: 100vh;
+  height: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .intro-container {
-    background: rgb(206, 206, 206);
-    padding: 1rem;
-    border-radius: 5%;
+  background: rgb(206, 206, 206);
+  padding: 1rem;
+  border-radius: 5%;
 }
 
 .tittel {
-    text-align: center;
+  text-align: center;
 }
 
 .farger {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .farge {
-    margin-left: 1rem;
-    padding: 1rem;
-    border-radius: 90%;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    color: black;
+  margin-left: 1rem;
+  padding: 1rem;
+  border-radius: 90%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: black;
 }
