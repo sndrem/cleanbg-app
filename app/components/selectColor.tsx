@@ -1,11 +1,13 @@
 import { useNavigate, useParams } from "@remix-run/react";
 import { useEffect, useState } from "react";
-import { ChromePicker, ColorResult } from "react-color";
+import type { ColorResult } from "react-color";
+import { ChromePicker } from "react-color";
 
-export default function SelectColor() {
+export default function SelectColor(): JSX.Element {
   const { hex } = useParams();
   const navigate = useNavigate();
   const [selectedColor, setSelectedColor] = useState(hex);
+  const [visColorPicker, setVisColorPicker] = useState(true);
 
   function onChange(event: ColorResult) {
     setSelectedColor(event.hex);
@@ -21,8 +23,20 @@ export default function SelectColor() {
   }, [selectedColor]);
 
   return (
-    <>
-      <ChromePicker color={selectedColor!} onChange={onChange} />
-    </>
+    <div className="color-picker-container">
+      <button
+        className="color-picker-button"
+        onClick={() => setVisColorPicker(!visColorPicker)}
+      >
+        {visColorPicker ? "Skjul" : "Vis fargevelger"}
+      </button>
+      <div
+        className={`${
+          visColorPicker ? "show-color-picker" : "hide-color-picker"
+        }`}
+      >
+        <ChromePicker disableAlpha color={selectedColor!} onChange={onChange} />
+      </div>
+    </div>
   );
 }
