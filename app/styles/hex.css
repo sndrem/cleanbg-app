@@ -7,7 +7,6 @@ body {
 .fullscreen {
   width: 100%;
   min-height: 100vh;
-  height: -webkit-fill-available;
   padding: 0;
   margin: 0;
 }
